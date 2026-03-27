@@ -21,7 +21,11 @@ var queryMap = map[string]bool{
 	"TABLE":      true, // shortcut for select * from <table> (postgresql)
 	"CALL":       true,
 	"FROM":       true,
-	"UNPIVOT":    true,
+	"UNPIVOT":    true, // UNPIVOT Statement (duckdb)
+	"PIVOT":      true, // PIVOT Statement (duckdb)
+	"COPY":       true, // COPY Statement (duckdb)
+	"SUMMARIZE":  true, // SUMMARIZE Statement (duckdb)
+	"MERGE":      true, // MERGE INTO Statement (duckdb)
 }
 
 // execMap is the map of SQL prefixes to execute.
