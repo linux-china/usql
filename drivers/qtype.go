@@ -23,9 +23,7 @@ var queryMap = map[string]bool{
 	"FROM":       true,
 	"UNPIVOT":    true, // UNPIVOT Statement (duckdb)
 	"PIVOT":      true, // PIVOT Statement (duckdb)
-	"COPY":       true, // COPY Statement (duckdb)
 	"SUMMARIZE":  true, // SUMMARIZE Statement (duckdb)
-	"MERGE":      true, // MERGE INTO Statement (duckdb)
 }
 
 // execMap is the map of SQL prefixes to execute.
@@ -246,6 +244,13 @@ var execMap = map[string]bool{
 	"ALTER SYNONYM":               true,
 	"ALTER TABLESPACE SET":        true,
 	"ASSOCIATE STATISTICS":        true,
+	// duckdb
+	"MERGE":                    true,
+	"CREATE MACRO":             true,
+	"CREATE SECRET":            true,
+	"CREATE PERSISTENT SECRET": true,
+	"DROP SECRET":              true,
+	"DROP PERSISTENT SECRET":   true,
 }
 
 // createIgnore are parts of the query exec type after CREATE to ignore.
